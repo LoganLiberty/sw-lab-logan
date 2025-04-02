@@ -1,0 +1,16 @@
+{
+    "name": "sw-lab-logan",
+    "version": "1.0.0",
+    "description": "Root package for Heroku build process",
+    "private": true,
+    "engines": {
+      "node": "18.x"
+    },
+    "scripts": {
+      "build": "npm run build --prefix frontend",
+      "heroku-postbuild": "npm run build --prefix frontend"
+    },
+    "cacheDirectories": [
+      "frontend/node_modules"
+    ]
+  }
